@@ -37,8 +37,8 @@
         }
         .main {
             display: grid;
-            grid-template-columns: 280px 1fr;
-            grid-template-rows: 1fr 200px;
+            grid-template-columns: 280px 320px 1fr;
+            grid-template-rows: 1fr 360px;
             height: calc(100vh - 80px);
             gap: 1px;
             background: #333;
@@ -60,6 +60,12 @@
         }
         .control-panel {
             grid-row: span 2;
+        }
+        .tree-view {
+            grid-column: 2 / 4;
+        }
+        .log-panel {
+            grid-column: 3;
         }
         .cost-params {
             margin-bottom: 1rem;
@@ -180,7 +186,7 @@
             background: #0a0a0a;
             padding: 0.5rem;
             border-radius: 4px;
-            max-height: 150px;
+            height: calc(100% - 2.5rem);
             overflow-y: auto;
         }
         .event-log .entry {
@@ -290,7 +296,7 @@
             </div>
         </div>
 
-        <div class="panel">
+        <div class="panel log-panel">
             <h2>Event Log</h2>
             <div class="event-log" id="eventLog"></div>
         </div>
